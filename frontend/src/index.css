@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2b2b2b !important; /* Updated to a darker color */
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.app {
+    background-color: #f5f5f5; /* Updated to a lighter shade of gray */
+    box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%; /* Adjusted width to accommodate padding on both sides */
+    max-width: 1400px; /* Limit maximum width for larger screens */
+    margin-top: 50px;
+}
+
+.task-header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between;
+    border-bottom: rgba(0, 0, 0, 0.05) 2px solid;
+    margin-bottom: 20px;
+}
+
+.btn-container,
+.task-container {
+    display: flex;
+    align-items: center;
+}
+
+.btn-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+/* Add a media query for screens below 1061px width */
+@media (max-width: 1061px) {
+    .btn-container {
+        flex-direction: column; /* Stack buttons on top of each other */
+        align-items: flex-start; /* Align buttons to the left */
+    }
+
+    .btn-container button {
+        width: 100%; /* Full width for buttons on smaller screens */
+        margin-bottom: 10px; /* Add some space between buttons */
+    }
+
+    .task-container {
+        flex-direction: column; /* Stack task container items on smaller screens */
+    }
+}
+
+.edit {
+    border: 2px solid rgb(126, 162, 131); /* Updated to a new shade of green */
+    color: rgb(126, 162, 131);
+    text-transform: uppercase;
+}
+
+.edit:hover {
+    background-color: rgb(156, 203, 166); /* Updated to a new shade on hover */
+}
+
+.edit:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(126, 162, 131);
+}
+
+.remove {
+    border: 2px solid rgb(238, 150, 136); /* Updated to a new shade of red */
+    color: rgb(238, 150, 136);
+    text-transform: uppercase;
+}
+
+.remove:hover {
+    background-color: rgb(238, 176, 162); /* Updated to a new shade on hover */
+}
+
+.remove:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(238, 150, 136);
+}
+
+.add {
+    border: 2px solid rgb(94, 101, 130); /* Updated to a new shade of blue */
+    color: rgb(94, 101, 130);
+    text-transform: uppercase;
+}
+
+.add:hover {
+    background-color: rgb(115, 122, 154); /* Updated to a new shade on hover */
+}
+
+.add:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(94, 101, 130);
+}
+
+.sign-out {
+    border: 2px solid rgb(238, 150, 136); /* Updated to a new shade of red */
+    background-color: rgb(238, 150, 136) !important;
+    color: rgb(234, 234, 234);
+}
+
+.sign-out:hover {
+    background-color: rgb(176, 96, 96) !important; /* Updated to a new shade on hover */
+    border: rgb(176, 96, 96);
+}
+
+.sign-out:active {
+    border: 2px solid rgb(176, 83, 83) !important; /* Updated to a new shade on click */
+    color: rgb(255, 255, 255);
+    background-color: rgb(176, 83, 83) !important;
+}
+
+.task {
+    width: 100%; /* Adjusted width to accommodate padding on both sides */
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mark {
+    padding: 15px;
+}
+
+.cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal {
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+}
+
+.form-title-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-title-container button {
+    border: none;
+    background-color: transparent;
+}
+
+.form-title-container button:active {
+    color: rgb(255, 50, 50);
+}
+
+.Modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Modal label {
+    font-size: 24px;
+}
+
+input {
+    margin: 10px 0;
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: 2px solid rgb(230, 232, 236);
+}
+
+.authorization-cont {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.authorization-cont-box {
+    width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+}
+
+.authorization-cont-box form {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    padding: 30px;
+}
+
+.authorization-choices {
+    display: flex;
+}
+
+.authorization-choices button {
+    width: 50%;
+    border: none;
+    padding: 15px;
+    color: rgb(35, 38, 47);
+}
+
+.greeting {
+    float: right;
+    font-size: 16px;
+    margin: 20px;
+    color: rgb(114, 114, 144);
+}
+
+.app-name {
+    font-size: 16px;
+    margin: 20px;
+    color: rgb(114, 114, 144);
+}
+
+.outside {
+    width: 250px;
+    height: 20px;
+    background-color: rgb(192, 192, 192); /* Updated to a new shade of gray */
+    border-radius: 10px;
+    overflow: hidden;
+    float: left;
+}
+
+.inside {
+    height: 20px;
+}
+
+.t-title {
+    width: 350px;
+}
+
+.completeness-cont {
+    display: flex;
+    column-gap: 30px;
+}
+
+.percent {
+    flex: right;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px; /* Customize the background color as needed */
+}
+
+.logo {
+    font-family: 'Arial', sans-serif; /* Choose a suitable font-family */
+    font-size: 32px; /* Adjust the font size as needed */
+    color: #ffffff; /* Set the text color */
+    font-weight: bold;
+    margin-bottom: 20px; /* Add spacing between logo and description */
+    color: #1f1f1f;
+    border: 2px solid #ffffff; /* Set the border properties */
+    border-radius: 10px; /* Adjust the border radius as needed */
+    padding: 10px; /* Add padding for a nicer appearance */
+}
+
+.description-container {
+    background-color: #f0f0f0; /* Updated to a new shade of gray */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.description-container h2 {
+    color: #404040; /* Updated to a new shade of gray */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.description-container p {
+    color: #555555; /* Updated to a new shade of gray */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.footer {
+    background-color: #333333; /* Darker background color */
+    color: #ffffff; /* Text color */
+    padding: 30px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-tab {
+    cursor: pointer;
+    color: #ffffff; /* Text color for the tabs */
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 16px;
+}
